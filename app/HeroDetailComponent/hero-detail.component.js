@@ -8,23 +8,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by 70243 on 2016/12/14.
+ */
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var core_2 = require('@angular/core');
+var hero_1 = require('../hero');
+var HeroDetailComponent = (function () {
+    function HeroDetailComponent() {
     }
-    AppComponent.prototype.onSelect = function (hero) {
-        this.selectedHero = hero;
-    };
-    AppComponent = __decorate([
+    __decorate([
+        core_2.Input(), 
+        __metadata('design:type', hero_1.Hero)
+    ], HeroDetailComponent.prototype, "hero", void 0);
+    HeroDetailComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            // template: `<h1>Hello {{name}}</h1>`,
-            templateUrl: './app/mainpage.html',
-            styleUrls: ['./app/mainpage.css']
+            selector: 'hero-detail',
+            templateUrl: './app/HeroDetailComponent/hero-detail.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroDetailComponent);
+    return HeroDetailComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HeroDetailComponent = HeroDetailComponent;
+//# sourceMappingURL=hero-detail.component.js.map

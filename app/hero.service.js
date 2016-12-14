@@ -8,23 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by 70243 on 2016/12/14.
+ */
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var mock_heroes_1 = require('./mock-heroes');
+var HeroService = (function () {
+    function HeroService() {
     }
-    AppComponent.prototype.onSelect = function (hero) {
-        this.selectedHero = hero;
+    HeroService.prototype.getHeroes = function () {
+        return mock_heroes_1.HEROES;
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            // template: `<h1>Hello {{name}}</h1>`,
-            templateUrl: './app/mainpage.html',
-            styleUrls: ['./app/mainpage.css']
-        }), 
+    HeroService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroService);
+    return HeroService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HeroService = HeroService;
+//# sourceMappingURL=hero.service.js.map
