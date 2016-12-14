@@ -1,6 +1,3 @@
-/**
- * Created by 70243 on 2016/12/14.
- */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -11,6 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by 70243 on 2016/12/14.
+ */
 var core_1 = require('@angular/core');
 var core_2 = require('@angular/core');
 var hero_1 = require('../hero');
@@ -24,7 +24,7 @@ var HeroDetailComponent = (function () {
     HeroDetailComponent = __decorate([
         core_1.Component({
             selector: 'hero-detail',
-            templateUrl: './app/HeroDetailComponent/herodetail.html'
+            templateUrl: './app/HeroDetailComponent/hero-detail.html'
         }), 
         __metadata('design:paramtypes', [])
     ], HeroDetailComponent);
