@@ -1,6 +1,6 @@
 "use strict";
 /**
- * Created by 70243 on 2016/12/14.
+ * Created by 70243 on 2016/12/15.
  */
 var Hero = (function () {
     function Hero() {
