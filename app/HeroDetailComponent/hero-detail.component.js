@@ -8,29 +8,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by 70243 on 2016/12/15.
+ */
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
-var hero_detail_component_1 = require('./HeroDetailComponent/hero-detail.component');
-var AppModule = (function () {
-    function AppModule() {
+var core_2 = require('@angular/core');
+var hero_1 = require('../hero');
+var HeroDetailComponent = (function () {
+    function HeroDetailComponent() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule
-            ],
-            declarations: [
-                app_component_1.AppComponent,
-                hero_detail_component_1.HeroDetailComponent
-            ],
-            bootstrap: [app_component_1.AppComponent]
+    __decorate([
+        core_2.Input(), 
+        __metadata('design:type', hero_1.Hero)
+    ], HeroDetailComponent.prototype, "selectedhero", void 0);
+    HeroDetailComponent = __decorate([
+        core_1.Component({
+            selector: 'hero-detail',
+            templateUrl: './app/HeroDetailComponent/hero-detail.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], HeroDetailComponent);
+    return HeroDetailComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.HeroDetailComponent = HeroDetailComponent;
+//# sourceMappingURL=hero-detail.component.js.map
