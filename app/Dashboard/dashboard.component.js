@@ -8,20 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/**
+ * Created by 70243 on 2016/12/21.
+ */
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var hero_service_1 = require('../hero.service');
+var DashboardComponent = (function () {
+    function DashboardComponent(heroService) {
+        this.heroService = heroService;
     }
-    AppComponent = __decorate([
+    DashboardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.heroService.getHeroes()
+            .then(function (heroes) { return _this.heroes = heroes.slice(1, 5); });
+    };
+    DashboardComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
+            selector: 'my-dashboared',
             moduleId: module.id,
-            templateUrl: 'app.component.html',
-            styleUrls: ['app.component.css'],
+            templateUrl: 'dashboard.component.html',
+            styleUrls: ['dashboard.component.scss']
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [hero_service_1.HeroService])
+    ], DashboardComponent);
+    return DashboardComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.DashboardComponent = DashboardComponent;
+//# sourceMappingURL=dashboard.component.js.map
