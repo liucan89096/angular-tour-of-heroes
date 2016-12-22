@@ -1,10 +1,9 @@
 /**
- * Created by 70243 on 2016/12/15.
+ * Created by 70243 on 2016/12/22.
  */
 import {Injectable} from '@angular/core';
 
 import {Hero} from './hero';
-
 import {HEROES} from './mock-heroes';
 
 @Injectable()
@@ -13,8 +12,9 @@ export class HeroService {
     return Promise.resolve(HEROES);
   }
 
-  getHero(id: number): Promise<Hero> {
+  getHeroe(id: number): Promise<Hero> {
     return this.getHeroes()
       .then(heroes => heroes.find(hero => hero.id === id));
   }
+
 }

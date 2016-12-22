@@ -9,31 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /**
- * Created by 70243 on 2016/12/21.
+ * Created by 70243 on 2016/12/22.
  */
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var dashboard_component_1 = require('./Dashboard/dashboard.component');
+var dashboard_component_1 = require('./dashboard/dashboard.component');
+var hero_detail_component_1 = require('./hero-detail/hero-detail.component');
 var heroes_component_1 = require('./heroes/heroes.component');
-var hero_detail_component_1 = require('./HeroDetailComponent/hero-detail.component');
 var routes = [
-    {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-    },
-    {
-        path: 'dashboard',
-        component: dashboard_component_1.DashboardComponent,
-    },
-    {
-        path: 'heroes',
-        component: heroes_component_1.HeroesComponent
-    },
-    {
-        path: 'detail/:id',
-        component: hero_detail_component_1.HeroDetailComponent
-    }
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+    { path: 'detail/:id', component: hero_detail_component_1.HeroDetailComponent },
+    { path: 'heroes', component: heroes_component_1.HeroesComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -41,11 +28,11 @@ var AppRoutingModule = (function () {
     AppRoutingModule = __decorate([
         core_1.NgModule({
             imports: [router_1.RouterModule.forRoot(routes)],
-            exports: [router_1.RouterModule]
+            exports: [router_1.RouterModule],
         }), 
         __metadata('design:paramtypes', [])
     ], AppRoutingModule);
     return AppRoutingModule;
 }());
 exports.AppRoutingModule = AppRoutingModule;
-//# sourceMappingURL=app-routing.module.js.map
+//# sourceMappingURL=app-routing.js.map
