@@ -1,7 +1,7 @@
-"use strict";
 /**
- * Created by 70243 on 2016/12/15.
+ * Created by 70243 on 2016/12/22.
  */
+"use strict";
 var Hero = (function () {
     function Hero() {
     }

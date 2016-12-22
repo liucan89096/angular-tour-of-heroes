@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /**
- * Created by 70243 on 2016/12/15.
+ * Created by 70243 on 2016/12/22.
  */
 var core_1 = require('@angular/core');
 var mock_heroes_1 = require('./mock-heroes');
@@ -19,7 +19,7 @@ var HeroService = (function () {
     HeroService.prototype.getHeroes = function () {
         return Promise.resolve(mock_heroes_1.HEROES);
     };
-    HeroService.prototype.getHero = function (id) {
+    HeroService.prototype.getHeroe = function (id) {
         return this.getHeroes()
             .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
     };
@@ -30,4 +30,4 @@ var HeroService = (function () {
     return HeroService;
 }());
 exports.HeroService = HeroService;
-//# sourceMappingURL=hero.service.js.map
+//# sourceMappingURL=hero-service.js.map
